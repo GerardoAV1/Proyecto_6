@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arreglos</h1>
+    <p id="lista"></p>
+    <p id="lista2"></p>
+    <p id="lista3"></p>
+    <p id="lista4"></p>
+    <p id="lista5"></p>
+    <p id="lista6"></p>
+    <p id="lista7"></p>
+    <p id="lista8"></p>
+
+
+
+    <script>
+        const fruits = ["apple", "orange", "banana", "grape"];
+        let size = fruits.length;
+        console.log(size);
+
+        for(let i = 0; i< size; i++){
+            console.log(fruits[i]);
+          
+        }
+
+        let lista1 = document.getElementById("lista");
+        lista.innerHTML = fruits.toString();
+        
+
+        let lista2 = document.getElementById("lista2");
+        lista2.innerHTML = fruits.join(" ** ");
+
+        //Eliminar un elemento del arreglo
+
+        let lista3 = document.getElementById("lista3");
+        fruits.pop();
+        fruits.pop();
+        lista3.innerHTML = "Lista 3: "+fruits.join(" ** ");
+        
+        let lista4 = document.getElementById("lista4");
+        fruits.push("mango");
+        fruits.push("melon");
+        lista4.innerHTML = "Lista 4: "+fruits.join(" ** ");
+
+        let lista5 = document.getElementById("lista5");
+        fruits.shift();
+        fruits.shift();
+        lista5.innerHTML = "Lista 5: "+fruits.join(" ** ");
+
+        let lista6 = document.getElementById("lista6");
+        fruits.unshift("uva");
+
+        lista6.innerHTML = "Lista 6: "+fruits.join(" ** ");
+
+        let lista7 = document.getElementById("lista7");
+        
+        
+        const nombresmujeres = ["Ana", "Maria", "Sofia", "Luisa"];
+        const nombreshombres = ["Pedro", "Juan", "Luis", "Carlos"];        
+
+            const listanombres = nombresmujeres.concat(nombreshombres);
+            lista7.innerHTML = "Lista 7: "+listanombres.join(" __ ");
+
+
+    </script>
+</body>
+</html>
